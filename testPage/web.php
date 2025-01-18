@@ -14,6 +14,22 @@ $currentTime = date("H:i:s");
     <p>
         Current Server Time: <?= $currentTime ?>
     </p>
+    <table>
+        <thead>
+            <th>
+            <td><b>Key</b></td>
+            <td><b>Value</b></td>
+            </th>
+        </thead>
+        <tbody>
+            <?php foreach ($_SERVER as $key => $value): ?>
+                <tr>
+                    <td><?= $key ?></td>
+                    <td><?= $value ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
 </body>
 
 </html>
